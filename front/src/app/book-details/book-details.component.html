@@ -1,0 +1,19 @@
+<div *ngIf="book" class="book_details_box">
+  <div class="book_title">
+    <p>{{book.title}}</p>
+  </div>
+  <div class="book_info_box">
+    <div class="book_image">
+    <img src="../../assets/image/book-image.jpg" height="132" width="90">
+    </div>
+    <div class="book_details">
+      <div class="book_description">
+        <p>{{book.description}}</p>
+      </div>
+      <div class="book_buy_info">
+        <p class="book_price">{{book.price}}.00 UAH</p>
+        <button class="book_buy_button" mat-raised-button color="warn">Buy</button>
+      </div>
+    </div>
+  </div>
+</div>
