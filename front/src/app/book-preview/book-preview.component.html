@@ -1,0 +1,10 @@
+<div class="book_preview_page">
+  <div class="book_preview_box">
+    <ul class="book_list">
+      <li *ngFor="let book of books">
+        <!--          (click)="onSelect(chat)"-->
+        <app-book-details [book]="book"></app-book-details>
+      </li>
+    </ul>
+  </div>
+</div>

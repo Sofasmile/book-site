@@ -1,0 +1,47 @@
+@import "src/color-theme";
+@import "src/typography";
+
+.book_details_box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid $shadow;
+}
+
+.book_title {
+  @extend %typography-20;
+}
+
+.book_image {
+  flex-grow: 0;
+}
+
+.book_info_box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7px;
+}
+
+.book_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0 10px 0;
+}
+
+.book_description {
+
+}
+
+.book_buy_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.book_price {
+  @extend %typography-20;
+}

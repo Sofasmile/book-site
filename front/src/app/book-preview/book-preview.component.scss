@@ -1,0 +1,29 @@
+@import "src/typography";
+@import "src/color-theme";
+
+.book_preview_page {
+  display: flex;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.book_preview_box {
+  margin: auto;
+  width: 700px;
+  height: 90vh;
+  background-color: $white;
+  border: 1px solid $shadow;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll !important;
+}
+
+.book_list {
+  list-style-type: none;
+}
+
+
+
+
+
+

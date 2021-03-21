@@ -1,0 +1,10 @@
+%typography-roboto-500 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 1.15em;
+}
+
+%typography-20 {
+  @extend %typography-roboto-500;
+  font-size: 20px;
+}
