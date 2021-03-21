@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 public class BookResponseDto {
   private Long id;
   private String title;
+  private int price;
   private int year;
-  private String genre;
   private String description;
 }

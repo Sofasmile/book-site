@@ -10,17 +10,17 @@ public class BookMapper {
   public BookResponseDto createResponseDto(Book book) {
     return new BookResponseDto()
         .setId(book.getId())
+        .setPrice(book.getPrice())
         .setTitle(book.getTitle())
         .setDescription(book.getDescription())
-        .setGenre(book.getGenre())
         .setYear(book.getYear());
   }
 
   public Book createModel(BookRequestDto bookResponseDto) {
     return new Book()
         .setTitle(bookResponseDto.getTitle())
+        .setPrice(bookResponseDto.getPrice())
         .setDescription(bookResponseDto.getDescription())
-        .setGenre(bookResponseDto.getGenre())
         .setYear(bookResponseDto.getYear());
   }
 }
