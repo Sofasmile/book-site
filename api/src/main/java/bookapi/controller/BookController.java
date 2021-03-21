@@ -8,6 +8,7 @@ import bookapi.mapper.BookMapper;
 import bookapi.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/book")
 public class BookController {
   @Autowired
@@ -25,10 +27,10 @@ public class BookController {
   private BookMapper bookMapper;
 
   @GetMapping
-  public List<BookResponseDto> getAllBook() {
-    return bookService.getAll().stream()
+  public ResponseEntity<List<BookResponseDto>> getAllBook() {
+    return ResponseEntity.ok(bookService.getAll().stream()
         .map(value -> bookMapper.createResponseDto(value))
-        .collect(Collectors.toList());
+        .collect(Collectors.toList()));
   }
 
   @GetMapping("{bookId}")
