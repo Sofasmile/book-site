@@ -5,16 +5,12 @@ import { BookCreateFormComponent } from "./book-create-form/book-create-form.com
 
 const routes: Routes = [
   {
-    path: 'book/list',
+    path: "book/list",
     component: BookPreviewComponent
   },
   {
-    path: 'book/create',
+    path: "book/create",
     component: BookCreateFormComponent
-  },
-  {
-    path: '**',
-    redirectTo: 'book/create'
   }
 ];
 

@@ -1,13 +1,13 @@
 @import "src/typography";
 @import "src/color-theme";
 
-.book_create_page {
+.book_preview_page {
   display: flex;
   min-height: 100vh;
   padding: 32px;
 }
 
-.book_create_box {
+.book_preview_box {
   margin: auto;
   width: 400px;
   padding: 30px 20px;
@@ -15,19 +15,19 @@
   border: 1px solid $shadow;
   display: flex;
   flex-direction: column;
+  overflow: scroll !important;
 }
 
-.form_title {
+.title {
   @extend %typography-20;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  align-content: center;
   margin-bottom: 20px;
-  width: 100%;
 }
 
-.input_wrapper {
+.form_box {
   width: 100%;
 }
 
