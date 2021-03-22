@@ -1,30 +1,30 @@
-<div class="book_create_page">
-  <div class="book_create_box">
-    <div class="form_title">
+<div class="book_preview_page">
+  <div class="book_preview_box">
+    <div class="title">
       Create book
     </div>
     <div>
-      <form #createBookForm="ngForm" novalidate (ngSubmit)="createBook(createBookForm)">
-      <mat-form-field class="input_wrapper" appearance="outline">
+    <form #createBookForm="ngForm" (ngSubmit)="createBook(createBookForm)">
+      <mat-form-field class="form_box" appearance="outline">
         <mat-label>Book title</mat-label>
         <input name="title" matInput ngModel>
       </mat-form-field>
-      <mat-form-field class="input_wrapper" appearance="outline">
+      <mat-form-field class="form_box" appearance="outline">
         <mat-label>Book price</mat-label>
         <input name="price" matInput type="number" ngModel>
       </mat-form-field>
-      <mat-form-field class="input_wrapper" appearance="outline" >
+      <mat-form-field class="form_box" appearance="outline">
         <mat-label>Book year</mat-label>
         <input name="year" matInput type="number" ngModel>
       </mat-form-field>
-      <mat-form-field class="input_wrapper" appearance="outline">
+      <mat-form-field class="form_box" appearance="outline">
         <mat-label>Description</mat-label>
         <textarea name="description" matInput ngModel></textarea>
       </mat-form-field>
       <div class="button_box">
-        <button type="submit" name="Create" mat-raised-button color="warn">Create new book</button>
+      <button type="submit" mat-raised-button color="warn">Create book</button>
       </div>
-      </form>
+    </form>
     </div>
   </div>
 </div>

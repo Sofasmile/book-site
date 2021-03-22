@@ -7,10 +7,10 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from "@angular/material/button";
-import { BookCreateFormComponent } from './book-create-form/book-create-form.component';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
 import { FormsModule } from "@angular/forms";
+import { BookCreateFormComponent } from './book-create-form/book-create-form.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -25,9 +25,9 @@ import { FormsModule } from "@angular/forms";
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
+    FormsModule,
     MatFormFieldModule,
-    MatInputModule,
-    FormsModule
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

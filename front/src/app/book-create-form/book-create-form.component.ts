@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { BookService } from "../service/book.service";
-import { NgForm } from "@angular/forms";
-import { BookRequest } from "../model/book-request";
+import {Component, OnInit} from '@angular/core';
+import {NgForm} from "@angular/forms";
+import {BookRequest} from "../model/book-request";
+import {BookService} from "../service/book.service";
 
 @Component({
   selector: 'app-book-create-form',
@@ -10,19 +10,22 @@ import { BookRequest } from "../model/book-request";
 })
 export class BookCreateFormComponent implements OnInit {
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService) {
+  }
 
   ngOnInit(): void {
   }
 
-  createBook(form: NgForm): void {
+  createBook(form: NgForm) {
     const book = new BookRequest(
       form.value.title,
       form.value.price,
       form.value.year,
-      form.value. description
-    );
+      form.value.description);
+    console.log(book);
     this.bookService.createBook(book).subscribe();
     form.resetForm();
+    // get info from fields
+    // send request to api (spring boot)
   }
 }
